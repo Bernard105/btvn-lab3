@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Flexbox</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+        }
+
+        .pricing {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px 20px;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: #12d4f7;
+            color: white;
+            padding: 24px;
+            position: relative;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .price {
+            font-size: 42px;
+            font-weight: bold;
+        }
+
+        .price span {
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .off {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 4px 10px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .desc {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .card-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card-body li {
+            margin: 12px 0;
+        }
+
+        .card-body li::before {
+            content: "✓ ";
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        .buy {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 999px;
+            border: 2px solid #2f2fa2;
+            background: white;
+            color: #2f2fa2;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .card.popular {
+            transform: translateY(-20px);
+        }
+
+        .card.popular .card-header {
+            background: #2f80ed;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background: #1f1f7a;
+            color: white;
+            padding: 6px 12px;
+            font-size: 12px;
+            transform: rotate(90deg);
+            margin: 0 20px;
+        }
+
+
+        @media (max-width: 440px) {
+            .pricing {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card.popular {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pricing">
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Entry</h3>
+                <div class="price">$14 <span>/month</span>
+                    <span class="off">10% OFF</span>
+                </div>
+                <div class="desc">Easy start on the cloud</div>
+            </div>
+
+            <div class="card-body">
+                <ul>
+                    <li>Unlimited Websites</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>100 GB SSD Storage</li>
+                    <li>3 GB RAM</li>
+                </ul>
+                <button class="buy">BUY NOW</button>
+            </div>
+        </div>
+        <div class="card popular">
+            <div class="card-header">
+                <div class="ribbon">Popular</div>
+                <h3>Entry</h3>
+                <div class="price">$14 <span>/month</span>
+                    <span class="off">10% OFF</span>
+                </div>
+                <div class="desc">Easy start on the cloud</div>
+            </div>
+
+            <div class="card-body">
+                <ul>
+                    <li>Unlimited Websites</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>100 GB SSD Storage</li>
+                    <li>3 GB RAM</li>
+                </ul>
+                <button class="buy">BUY NOW</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Entry</h3>
+                <div class="price">$14 <span>/month</span>
+                    <span class="off">10% OFF</span>
+                </div>
+                <div class="desc">Easy start on the cloud</div>
+            </div>
+
+            <div class="card-body">
+                <ul>
+                    <li>Unlimited Websites</li>
+                    <li>Unlimited Bandwidth</li>
+                    <li>100 GB SSD Storage</li>
+                    <li>3 GB RAM</li>
+                </ul>
+
+                <button class="buy">BUY NOW</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
